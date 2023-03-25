@@ -30,14 +30,14 @@ function Login() {
         <div className="login_box">
             <h1 id="welcome_to">Welcome to</h1>
             <img
-                src='https://live.staticflickr.com/65535/52731848639_6c2696a6ce_b.jpg'
+                src='./images/logo.png'
             />
-            <div className="login_test">
-                <h1>Sign in to ChatWave</h1>
+            <div className="sign_in">
+                Sign in to ChatWave
             </div>
 
             <Button onClick = {signIn}>
-                Sign In With Google
+                Sign in with Google
             </Button>
         </div>
     </div>
