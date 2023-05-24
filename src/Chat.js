@@ -164,7 +164,7 @@
 
 
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { collection, doc, onSnapshot, query, orderBy } from 'firebase/firestore';
 import { getFirestore } from 'firebase/firestore';
 import { Avatar } from '@mui/material';
@@ -182,6 +182,7 @@ function Chat() {
   const [roomName, setRoomName] = useState('');
   const [messages, setMessages] = useState([]);
   const [{ user },dispatch] = useStateValue();
+  const messageEndRef = useRef(null);
 
   useEffect(() => {
     if (roomId) {
@@ -205,6 +206,10 @@ function Chat() {
       };
     }
   }, [roomId]);
+
+  useEffect(() => {
+    messageEndRef.current?.scrollIntoView();
+  }, [messages]);
 
   const handleSend = (e) => {
     e.preventDefault();
@@ -239,6 +244,7 @@ function Chat() {
             </span>
           </p>
         ))}
+        <div ref={messageEndRef}></div>
 
         {/* <p className="chat_message">
           <span className="chat_name">Tejas</span>
