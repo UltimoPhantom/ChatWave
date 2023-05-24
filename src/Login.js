@@ -7,11 +7,6 @@ import { useStateValue } from './StateProvider';
 
 function Login() {
 
-    // const signIn = () => {
-    //     auth.signInWithPopup(provider).then(result => console.log(result)
-    //     ).catch(error => alert(error.messages));
-    // };
-
     const [{},dispatch] = useStateValue();
 
     const signIn = () => {
