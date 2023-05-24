@@ -1,17 +1,23 @@
+body{
+    margin:0;
+    padding:0;
+}
+
 .login {
-    background-color: #f8f8f8;
-    height: 100vh;
-    width: 100vw;
+    background-color:#008bc5;
+    height: 100%;
+    width: 100%;
     display: grid;
     place-items: center;
 }
 
 .login_box {
-    padding: 75px;
+    padding: 5%;
+    margin:5%;
     text-align: center;
-    background-color: white;
+    background-color:#4ffbdf;
     border-radius: 25px;
-    box-shadow: 0 0 5px 1px black;
+    box-shadow: 0 0 5px 1px black;   
 }
 
 .login_box:hover {
@@ -23,19 +29,34 @@
  
 .login_box > img {
     object-fit: contain;
-    height: 200px;
+    height:auto;
+    max-width: 100%;
     margin-bottom: 40px;
 }
 
 #welcome_to {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 50px;
 }
+.sign_in{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:1.6em;
+    font-weight: 500;
+
+}
+
 
 .login_box > button {
     
     margin-top: 10px;
     text-transform: inherit !important;
-    background-color: #0a8d48 !important;
+    background-color: #22b600 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    font-weight: 700;
     border-radius: 7px;
+}
+
+.login_box > button:hover{
+    box-shadow:  0 0 2px 2px #22b600;
 }
