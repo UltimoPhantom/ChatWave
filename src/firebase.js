@@ -12,7 +12,7 @@ const firebaseConfig = {
   projectId: "trial-7b2a3",
   storageBucket: "trial-7b2a3.appspot.com",
   messagingSenderId: "458391746266",
-  appId: "1:458391746266:web:ec55f6a5007bb5997f97e3",
+  appId: "1:458391746266:web:ec55f6a5007bb5997f97e3", 
   measurementId: "G-FKKSCJMDHE"
 }; 
 
@@ -23,5 +23,3 @@ const provider = new GoogleAuthProvider();
 
 export { auth, provider, signInWithPopup };
 export default db;
-
-
