@@ -60,42 +60,47 @@ function Chat() {
   };
 //  () => setUserInput('')
 // console.log('You typed', userInput)
-  return (
-    <div className="chat">
-      <div className="chat_header">
-        <Avatar />
-        <div className="chat_header_info">
-          <h3>{roomName}</h3>
-        </div>
-      </div>
-      <div className="chat_body">
-        {messages.map((message) => (
-          <p className={`chat_message ${message.name === user.displayName && 'chat_got'}`}>
-            <span className="chat_name">{message.name}</span>
-            {message.message}
-            <span className="chat_time">
-              {new Date(message.timestamp?.toDate()).toUTCString()}
-            </span>
-          </p>
-        ))}
-        <div ref={messageEndRef}></div>
-
-      </div>
-      <div className="chat_footer">
-        <form>
-          <input
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            type="text"
-            placeholder="Type a message.."
-          />
-          <button onClick={handleSend} type="submit">
-            Send
-          </button>
-        </form>
+return (
+  <div className="chat">
+    <div className="chat_header">
+      <Avatar />
+      <div className="chat_header_info">
+        <h3>{roomName}</h3>
       </div>
     </div>
-  );
+    <div id="wrapper">
+      <div className="chat_body scrollbar" id="style-8">
+        <div className="force-overflow">
+          {messages.map((message) => (
+            <p className={`chat_message ${message.name === user.displayName && 'chat_got'}`}>
+              <span className="chat_name">{message.name}</span>
+              {message.message}
+              <span className="chat_time">
+                {new Date(message.timestamp?.toDate()).toUTCString()}
+              </span>
+            </p>
+          ))}
+        </div>
+
+        <div ref={messageEndRef}></div>
+      </div>
+    </div>
+    <div className="chat_footer">
+      <form>
+        <input
+          value={userInput}
+          onChange={(e) => setUserInput(e.target.value)}
+          type="text"
+          placeholder="Type a message.."
+        />
+        <button onClick={handleSend} type="submit">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+);
+
 }
 
 export default Chat;
