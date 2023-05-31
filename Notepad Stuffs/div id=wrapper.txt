@@ -1,0 +1,68 @@
+<div id="wrapper">   
+    <div class="scrollbar" id="style-8">
+      <div class="force-overflow"></div>
+    </div>
+</div>
+
+CSS:
+
+
+#style-8::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #F5F5F5;
+}
+
+#style-8::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-8::-webkit-scrollbar-thumb
+{
+	background-color: #000000;	
+}
+
+
+
+
+
+
+
+
+
+{/* 
+          <p className={`chat_message ${true && 'chat_got'}`}>
+            <span className="chat_name">Tejas Subramanya</span>
+            Hello How are you?
+            <span className="chat_time">
+              12th may 2023 1105
+            </span>
+          </p>
+
+          <p className={`chat_message ${false && 'chat_got'}`}>
+            <span className="chat_name">Phantom</span>
+            Im Fine how are u?
+            <span className="chat_time">
+            12th may 2023 1105
+            </span>
+          </p>
+
+          <p className={`chat_message ${true && 'chat_got'}`}>
+            <span className="chat_name">Tejas Subramanya</span>
+            Im Good
+            <span className="chat_time">
+            12th may 2023 1105
+            </span>
+          </p>
+
+          <p className={`chat_message ${false && 'chat_got'}`}>
+            <span className="chat_name">Phantom</span>
+            Good to know :)
+            <span className="chat_time">
+            12th may 2023 1105
+            </span>
+          </p> */}
+
+

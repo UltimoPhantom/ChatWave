@@ -105,3 +105,7 @@
     background-position: 200% center;
   }
 }
+
+#addNewChatButton {
+    margin-left: 150px;
+}

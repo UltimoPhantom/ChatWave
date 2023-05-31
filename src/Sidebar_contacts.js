@@ -44,7 +44,7 @@ function Sidebar_contacts({ id,name,addNewChat }) {
         await addDoc(collection(db, 'rooms'), {
           name: roomName,
         });
-        console.log("Room Name is: ", roomName);
+        // console.log("Room Name is: ", roomName);
 
       }
     };
@@ -53,6 +53,7 @@ function Sidebar_contacts({ id,name,addNewChat }) {
   return !addNewChat ? (
     <Link to = {`/rooms/${id}`}>
     <div className="sidebarchat_names">
+      
     <Avatar style={{ transform: 'scale(1.2)' }} />
 
         <div className="sidebarchat_info">
@@ -63,7 +64,7 @@ function Sidebar_contacts({ id,name,addNewChat }) {
     </Link>
   ) : (
     <div onClick = {createChat} className="Sidebar_contacts">
-        <h2 className='button'>Add New Chat</h2>
+        <h2 className='button' id='addNewChatButton'>Add New Chat</h2>
     </div>
   )
 }
