@@ -1,10 +1,14 @@
 body{
     margin:0;
     padding:0;
+    background-image: url("https://w0.peakpx.com/wallpaper/818/148/HD-wallpaper-whatsapp-background-cool-dark-green-new-theme-whatsapp.jpg");
 }
 
 .login {
-    background-color:#008bc5;
+    /* background-color:#008bc5; */
+    background-image: url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg");
+    /* background-image: url("https://wallpaperaccess.com/full/1288082.jpg"); */
+
     height: 100%;
     width: 100%;
     display: grid;
