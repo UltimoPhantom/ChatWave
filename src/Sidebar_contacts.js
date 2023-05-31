@@ -63,7 +63,7 @@ function Sidebar_contacts({ id,name,addNewChat }) {
     </Link>
   ) : (
     <div onClick = {createChat} className="Sidebar_contacts">
-        <h2 id='addChatText'>Add New Chat (➕)</h2>
+        <h2 className='button'>Add New Chat</h2>
     </div>
   )
 }
