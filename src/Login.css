@@ -49,6 +49,7 @@ body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size:1.6em;
     font-weight: 500;
+    padding-bottom: 20px;
 
 }
 
@@ -68,5 +69,6 @@ body{
     box-shadow:  0 0 2px 2px #22b600;
 }
 
-
-
+.logo {
+    transform: scale(0.90);
+}
