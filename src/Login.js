@@ -22,6 +22,7 @@ function Login() {
 
   return (
     <div className="login">
+        
         <div className="login_box">
             <h1 id="welcome_to">Welcome to</h1>
             <img
