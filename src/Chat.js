@@ -8,6 +8,7 @@ import firebaseApp from './firebase';
 import db from './firebase';
 import { addDoc, serverTimestamp, fieldValue } from 'firebase/firestore';
 import { useStateValue } from './StateProvider';
+import notificationSound from './Assets/Notification.mp3';
 
 
 function Chat() {
@@ -42,8 +43,35 @@ function Chat() {
   }, [roomId]);
 
   useEffect(() => {
+    // var nfS = new Audio(notificationSound);
+    // nfS.play();
     messageEndRef.current?.scrollIntoView();
   }, [messages]);
+
+  function makeSound(x) {
+    if(x==1) {
+      var nfS = new Audio(notificationSound);
+      nfS.play();
+      x = 0;
+    } else {
+      x++;
+    }
+    console.log("Value of x is : " + x);
+    return x;
+  }
+
+  var soundCount = 1;
+  console.log("SSS: " + soundCount);
+
+  useEffect(() => {
+    // soundCount = makeSound(soundCount);
+    console.log("Value of soundCount is: " + soundCount);
+  }, [messages]);
+  
+  useEffect(() => {
+    var nfS = new Audio(notificationSound);
+    nfS.play();
+  }, [messages])
 
   const handleSend = (e) => {
     e.preventDefault();
