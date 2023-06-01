@@ -29,7 +29,9 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar_header">
-        <Avatar src = {user?.photoURL}/>
+      <Avatar src={user?.photoURL} style={{ transform: 'scale(1.50)' }} />
+
+        <span className="chatWaveTextBox"><h1 id="chatWaveText" className='animate-charcter'>Chat Wave</h1></span>
       </div>
       <div className="sidebar_search"></div>
       <div className="sidebar_chat">

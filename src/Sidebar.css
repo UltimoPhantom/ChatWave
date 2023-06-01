@@ -1,3 +1,7 @@
+* {
+    text-decoration: none !important;
+}
+
 .sidebar {
     flex: 0.35;
     display: flex;
@@ -12,27 +16,96 @@
 
 .sidebar_chat {
     flex: 1;
-    /* overflow: scroll; */
+    /* background-color: #8ea098; */
+    background-image: url("https://camo.githubusercontent.com/854a93c27d64274c4f8f5a0b6ec36ee1d053cfcd934eac6c63bed9eaef9764bd/68747470733a2f2f7765622e77686174736170702e636f6d2f696d672f62672d636861742d74696c652d6461726b5f61346265353132653731393562366237333364393131306234303866303735642e706e67");
+/* background-image: url("https://e1.pxfuel.com/desktop-wallpaper/461/478/desktop-wallpaper-whatsapp-dark-whatsapp-chat.jpg"); */
+    overflow-y: scroll;
 }
 
 .sidebarchat_names {
     display: flex;
-    /* padding: 20px; */
-    padding-left: 20px;
+    margin-left: 50px;
     align-items: center;
     cursor: pointer;
-    border-bottom: 2px brown;
+    border-radius: 30px;
+    color: #000000;
 }
 
+  
+
+
 .sidebarchat_names:hover {
-    background-color: #e8b6b6d9;
+    background-color: #6b948dd9;
 }
 
 .sidebarchat_info > h2 {
     font-size: 25px;
     margin-bottom: 8px;
+    text-decoration: none;
 }
 
 .sidebarchat_info {
     margin-left: 20px;
+    text-decoration: none;
+}
+
+#addChatText {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: xx-large;
+    color: #cccccc;
+    border-color: blueviolet;
+    width: fit-content;
+    padding: 10px;
+    background-color: #e1e2e4;
+    border-radius: 15px;
+    margin-left: 17%;
+    
+}
+
+#chatWaveText {
+    font-family: 'Varela Round', sans-serif;
+    font-size: xx-large;
+}
+
+.chatWaveTextBox {
+    position: absolute;
+    font-size: 30px;
+    margin-left: 300px;
+    /* width: fit-content; */
+    margin-top: -21px;
+    margin-left: 115px;
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 220px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+#addNewChatButton {
+    margin-left: 150px;
 }

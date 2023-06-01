@@ -4,6 +4,7 @@ import { Button } from '@mui/material';
 import { auth, provider, signInWithPopup } from './firebase';
 import { actionTypes } from './reducer';
 import { useStateValue } from './StateProvider';
+import chatWaveLogo from './Assets/logo.png';
 
 function Login() {
 
@@ -22,10 +23,11 @@ function Login() {
 
   return (
     <div className="login">
+        
         <div className="login_box">
             <h1 id="welcome_to">Welcome to</h1>
-            <img
-                src='./images/logo.png'
+            <img class="logo"
+                src={ chatWaveLogo }
             />
             <div className="sign_in">
                 Sign in to ChatWave
