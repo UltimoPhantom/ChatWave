@@ -32,6 +32,8 @@
     overflow: scroll;
     overflow-x: hidden;
     background-color: #bdc9d1;
+    background-image: url("Assets/blob-scene-haikei.png")
+    /* background-image: url("Assets/stacked-peaks-haikei.png") */
 }
 
 .chat_message {
