@@ -37,10 +37,9 @@
 }
 
   
-
-
 .sidebarchat_names:hover {
-    background-color: rgb(52, 190, 130,0.5);
+    background-color: rgba(37, 230, 133, 0.4);
+    transition: all 0.25s ease-in;
 }
 
 .sidebarchat_info > h2 {
@@ -112,5 +111,6 @@
 }
 
 #addNewChatButton {
-    margin-left: 150px;
+    margin-left: 120px;
 }
+
