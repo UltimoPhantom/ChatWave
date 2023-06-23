@@ -87,7 +87,7 @@
 }
 
 .chat_footer > form > button {
-    display: none;
+    display: block;
 }
 
 
