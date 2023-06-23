@@ -6,6 +6,7 @@
     flex: 0.35;
     display: flex;
     flex-direction: column;
+    
 }
 
 .sidebar_header {
@@ -18,24 +19,27 @@
     flex: 1;
     /* background-color: #8ea098; */
     background-image: url("https://camo.githubusercontent.com/854a93c27d64274c4f8f5a0b6ec36ee1d053cfcd934eac6c63bed9eaef9764bd/68747470733a2f2f7765622e77686174736170702e636f6d2f696d672f62672d636861742d74696c652d6461726b5f61346265353132653731393562366237333364393131306234303866303735642e706e67");
-/* background-image: url("https://e1.pxfuel.com/desktop-wallpaper/461/478/desktop-wallpaper-whatsapp-dark-whatsapp-chat.jpg"); */
+/* background-image:  url("https://e1.pxfuel.com/desktop-wallpaper/461/478/desktop-wallpaper-whatsapp-dark-whatsapp-chat.jpg"); */
     overflow-y: scroll;
 }
 
 .sidebarchat_names {
     display: flex;
-    margin-left: 50px;
+    margin-left: 0px;
     align-items: center;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 25px;
     color: #000000;
+    padding: 0 30px;
+    margin:0 20px;
+    margin-bottom: 8px;
+
 }
 
   
-
-
 .sidebarchat_names:hover {
-    background-color: #6b948dd9;
+    background-color: rgba(37, 230, 133, 0.4);
+    transition: all 0.25s ease-in;
 }
 
 .sidebarchat_info > h2 {
@@ -107,5 +111,6 @@
 }
 
 #addNewChatButton {
-    margin-left: 150px;
+    margin-left: 120px;
 }
+

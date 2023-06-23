@@ -80,8 +80,9 @@
     flex: 1;
     border-radius: 30px;
     padding: 3px;
-    padding-top: 15px;
+    padding: 10px 8px;
     border: none;
+    outline: none;
     align-items: center;
 }
 
