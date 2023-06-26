@@ -445,9 +445,6 @@ import { ref, getStorage, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { storage } from './firebase';
 import SendFileButton from './sendfile';
 
-import { Document, Page } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-
 function Chat() {
   const [userInput, setUserInput] = useState('');
   const { roomId } = useParams();
@@ -455,7 +452,6 @@ function Chat() {
   const [messages, setMessages] = useState([]);
   const [{ user }, dispatch] = useStateValue();
   const messageEndRef = useRef(null);
-  const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
     if (roomId) {
@@ -546,10 +542,6 @@ function Chat() {
       });
   };
 
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-  };
-
   return (
     <div className="chat">
       <div className="chat_header">
@@ -565,24 +557,12 @@ function Chat() {
               <div key={message.id}>
                 <p className={`chat_message ${message.name === user.displayName && 'chat_got'}`}>
                   <span className="chat_name">{message.name}</span>
-                  {message.message.startsWith('http') ? (
-                    message.message.endsWith('.pdf') ? (
-                      <div>
-                        {/* <Document file={message.message} onLoadSuccess={onDocumentLoadSuccess}>
-                          {Array.from(new Array(numPages), (el, index) => (
-                            <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-                          ))}
-                        </Document> */}
-                         <Document file={message.message} onLoadSuccess={onDocumentLoadSuccess} /> {/* Pass numPages state */}
-                  {numPages && (
-                    Array.from(new Array(numPages), (el, index) => (
-                      <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-                    ))
-                  )}
-                      </div>
-                    ) : (
-                      <img src={message.message} alt="Sent Image" className="imageSent" />
-                    )
+                  {message.type === 'document' ? (
+                    <a href={message.message} target="_blank" rel="noopener noreferrer">
+                      {message.fileName}
+                    </a>
+                  ) : message.message.startsWith('http') ? (
+                    <img src={message.message} alt="Sent Image" className="imageSent" />
                   ) : (
                     <span>{message.message}</span>
                   )}
