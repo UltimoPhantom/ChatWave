@@ -82,7 +82,7 @@ function Sidebar_contacts({ id,name,addNewChat }) {
             ) : (
               <p>Image 📷</p>
             )
-          ) : null}
+          ) : <p>{messages[0]?.message}</p>}
         </div>
       </div>
     </Link>
