@@ -358,7 +358,7 @@ function Chat() {
                 <p className={`chat_message ${message.name === user.displayName && 'chat_got'}`}>
                   <span className="chat_name">{message.name}</span>
                   {message.message.startsWith('http') ? (
-                    <img src={message.message} alt="Sent Image" />
+                    <img src={message.message} alt="Sent Image" className='imageSent'/>
                   ) : (
                     <span>{message.message}</span>
                   )}
@@ -374,7 +374,7 @@ function Chat() {
       </div>
       <div className="chat_footer">
       <form>
-  <input
+  <input className='inputBox'
     value={userInput}
     onChange={(e) => setUserInput(e.target.value)}
     type="text"
@@ -385,18 +385,19 @@ function Chat() {
       Send
     </button>
   </div>
-  <div className='button'>
-    <label htmlFor="file-upload" className="custom-file-upload">
-      <i className="fa fa-cloud-upload"></i> Upload Document
-    </label>
-    <input id="file-upload" type="file" onChange={handleDocumentUpload} />
-  </div>
-  <div className='button'>
-    <label htmlFor="image-upload" className="custom-file-upload">
-      <i className="fa fa-cloud-upload"></i> Upload Image
-    </label>
-    <input id="image-upload" type="file" onChange={handleImageUpload} />
-  </div>
+  <div className='button uploadButton'>
+  <label htmlFor="file-upload" className="custom-file-upload">
+    <i className="fa fa-cloud-upload uploadButtons "></i> Docs
+  </label>
+  <input id="file-upload" type="file" onChange={handleDocumentUpload} style={{ display: 'none' }} />
+</div>
+<div className='button uploadButton'>
+  <label htmlFor="image-upload" className="custom-file-upload">
+    <i className="fa fa-cloud-upload uploadButtons "></i> Image
+  </label>
+  <input id="image-upload" type="file" onChange={handleImageUpload} style={{ display: 'none' }} />
+</div>
+
 </form>
       </div>
     </div>
