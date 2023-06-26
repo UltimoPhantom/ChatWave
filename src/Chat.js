@@ -568,11 +568,17 @@ function Chat() {
                   {message.message.startsWith('http') ? (
                     message.message.endsWith('.pdf') ? (
                       <div>
-                        <Document file={message.message} onLoadSuccess={onDocumentLoadSuccess}>
+                        {/* <Document file={message.message} onLoadSuccess={onDocumentLoadSuccess}>
                           {Array.from(new Array(numPages), (el, index) => (
                             <Page key={`page_${index + 1}`} pageNumber={index + 1} />
                           ))}
-                        </Document>
+                        </Document> */}
+                         <Document file={message.message} onLoadSuccess={onDocumentLoadSuccess} /> {/* Pass numPages state */}
+                  {numPages && (
+                    Array.from(new Array(numPages), (el, index) => (
+                      <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+                    ))
+                  )}
                       </div>
                     ) : (
                       <img src={message.message} alt="Sent Image" className="imageSent" />
