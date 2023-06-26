@@ -50,23 +50,49 @@ function Sidebar_contacts({ id,name,addNewChat }) {
     };
 
 
-  return !addNewChat ? (
-    <Link to = {`/rooms/${id}`}>
-    <div className="sidebarchat_names">
+  // return !addNewChat ? (
+  //   <Link to = {`/rooms/${id}`}>
+  //   <div className="sidebarchat_names">
       
-    <Avatar style={{ transform: 'scale(1.2)' }} />
+  //   <Avatar style={{ transform: 'scale(1.2)' }} />
 
+  //       <div className="sidebarchat_info">
+  //           <h2>{ name }</h2>
+  //           <p>{ (messages[0]?.message && messages[0]?.message.substring(0, 4))=='http' ? "Image 📷" : messages[0]?.message }</p>
+  //       </div>
+  //   </div>
+  //   </Link>
+  // ) : (
+  //   <div onClick = {createChat} className="Sidebar_contacts">
+  //       <h2 className='button' id='addNewChatButton'>Add New Chat</h2>
+  //   </div>
+  // )
+  return !addNewChat ? (
+    <Link to={`/rooms/${id}`}>
+      <div className="sidebarchat_names">
+        <Avatar style={{ transform: 'scale(1.2)' }} />
         <div className="sidebarchat_info">
-            <h2>{ name }</h2>
-            <p>{ (messages[0]?.message && messages[0]?.message.substring(0, 4))=='http' ? "Image 📷" : messages[0]?.message }</p>
+          <h2>{name}</h2>
+          {messages[0]?.message && messages[0]?.message.substring(0, 4) === 'http' ? (
+            messages[0]?.message.toLowerCase().endsWith('.pdf') ? (
+              <p>
+                <img src="pdf-logo.png" alt="PDF" style={{ height: '1.2em', marginRight: '0.5em' }} />
+                PDF File
+              </p>
+            ) : (
+              <p>Image 📷</p>
+            )
+          ) : null}
         </div>
-    </div>
+      </div>
     </Link>
   ) : (
-    <div onClick = {createChat} className="Sidebar_contacts">
-        <h2 className='button' id='addNewChatButton'>Add New Chat</h2>
+    <div onClick={createChat} className="Sidebar_contacts">
+      <h2 className="button" id="addNewChatButton">
+        Add New Chat
+      </h2>
     </div>
-  )
+  );
 }
 
 export default Sidebar_contacts
