@@ -143,3 +143,9 @@
   .button1 {
     max-height: 30px;
 }
+
+  .docSent {
+    padding-top: 700px !important;
+    color: cornflowerblue;
+    font-weight: 900;
+  }

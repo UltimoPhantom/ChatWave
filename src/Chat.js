@@ -558,8 +558,8 @@ function Chat() {
                 <p className={`chat_message ${message.name === user.displayName && 'chat_got'}`}>
                   <span className="chat_name">{message.name}</span>
                   {message.type === 'document' ? (
-                    <a href={message.message} target="_blank" rel="noopener noreferrer">
-                      {message.fileName}
+                    <a href={message.message} target="_blank" rel="noopener noreferrer" className='docSent'>
+                      <span>📃</span>{message.fileName}<span>📃</span>
                     </a>
                   ) : message.message.startsWith('http') ? (
                     <img src={message.message} alt="Sent Image" className="imageSent" />
