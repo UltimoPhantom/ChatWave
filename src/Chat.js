@@ -262,6 +262,7 @@ import { useStateValue } from './StateProvider';
 import notificationSound from './Assets/Notification.mp3';
 import { ref, getStorage, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { storage } from './firebase';
+import SendFileButton from './sendfile';
 
 
 function Chat() {
@@ -336,7 +337,11 @@ function Chat() {
         console.error('Error sending image:', error);
       });
   };
-  
+  const handleDocumentUpload = (event) => {
+    const file = event.target.files[0];
+    // perform any necessary actions with the selected file
+    console.log('Selected document:', file);
+  };
   return (
     <div className="chat">
       <div className="chat_header">
@@ -368,18 +373,31 @@ function Chat() {
         </div>
       </div>
       <div className="chat_footer">
-        <form>
-          <input
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            type="text"
-            placeholder="Type a message.."
-          />
-          <button onClick={handleSend} type="submit">
-            Send1111
-          </button>
-          <input type="file" onChange={handleImageUpload} />
-        </form>
+      <form>
+  <input
+    value={userInput}
+    onChange={(e) => setUserInput(e.target.value)}
+    type="text"
+    placeholder="Type a message.."
+  />
+  <div className='button1'>
+    <button onClick={handleSend} type="submit">
+      Send
+    </button>
+  </div>
+  <div className='button'>
+    <label htmlFor="file-upload" className="custom-file-upload">
+      <i className="fa fa-cloud-upload"></i> Upload Document
+    </label>
+    <input id="file-upload" type="file" onChange={handleDocumentUpload} />
+  </div>
+  <div className='button'>
+    <label htmlFor="image-upload" className="custom-file-upload">
+      <i className="fa fa-cloud-upload"></i> Upload Image
+    </label>
+    <input id="image-upload" type="file" onChange={handleImageUpload} />
+  </div>
+</form>
       </div>
     </div>
   );

@@ -6,10 +6,15 @@ import Login_page from './Components/login_page';
 import Login from './Login';
 import Sidebar from './Sidebar';
 import { useStateValue } from './StateProvider';
+import SendFileButton from './sendfile';
 
 function App() {
   // const [user, setUser] = useState(null);
   const [{ user },dispatch] = useStateValue();
+  // const handleSend = () => {
+  //   // handle sending file logic
+  // };
+
 
   return (
     <div className="app">
@@ -25,6 +30,7 @@ function App() {
               <Route path="/" element={<Chat />} />
             </Routes>
           </Router>
+          {/* <SendFileButton handleSend={handleSend} /> */}
         </div>
         )}
     </div>
