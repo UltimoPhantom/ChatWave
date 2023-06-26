@@ -58,7 +58,7 @@ function Sidebar_contacts({ id,name,addNewChat }) {
 
         <div className="sidebarchat_info">
             <h2>{ name }</h2>
-            <p>{ messages[0]?.message }</p>
+            <p>{ (messages[0]?.message && messages[0]?.message.substring(0, 4))=='http' ? "Image 📷" : messages[0]?.message }</p>
         </div>
     </div>
     </Link>
