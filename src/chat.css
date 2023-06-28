@@ -87,7 +87,7 @@
 }
 
 .chat_footer > form > button {
-    display: none;
+    display: block;
 }
 
 
@@ -123,3 +123,29 @@
     min-height: 100%; /* Ensure the content fills the entire scrolling area */
   }
   
+  .imageSent {
+    max-width: 400px;
+
+  }
+
+  .uploadButton {
+    max-width: 40px;
+    max-height: 30px;
+  }
+
+  .inputBox {
+    margin-top: 30px;
+    max-height: 30px;
+    max-width: 500px;
+    margin-top: 10px;
+  }
+
+  .button1 {
+    max-height: 30px;
+}
+
+  .docSent {
+    padding-top: 700px !important;
+    color: cornflowerblue;
+    font-weight: 900;
+  }

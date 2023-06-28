@@ -17,10 +17,6 @@ body{
 
 .login_box {
     /* max-width: fit-content; */
-    height: auto;
-    max-width: 520px;
-    /* padding: 5%;*/
-    /* margin:5%; */
     text-align: center;
     background-color:#4ffbdf;
     border-radius: 25px;
