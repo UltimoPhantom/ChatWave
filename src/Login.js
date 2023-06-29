@@ -34,7 +34,7 @@ function Login() {
             </div>
 
             <Button onClick = {signIn}>
-                Sign in with Google
+                Sign in with &nbsp; <i class="fa-brands fa-google fa-xl"></i>
             </Button>
         </div>
     </div>

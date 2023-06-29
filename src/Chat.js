@@ -434,6 +434,7 @@ import { useState, useEffect, useRef } from 'react';
 import { collection, doc, onSnapshot, query, orderBy } from 'firebase/firestore';
 import { getFirestore } from 'firebase/firestore';
 import { Avatar } from '@mui/material';
+
 import './chat.css';
 import { useParams } from 'react-router-dom';
 import firebaseApp from './firebase';
@@ -585,20 +586,20 @@ function Chat() {
             type="text"
             placeholder="Type a message.."
           />
-          <div className="button1">
-            <button onClick={handleSend} type="submit">
-              Send
-            </button>
-          </div>
+          
+          <button onClick={handleSend} type="submit" className="button1">
+            <i class="fa-solid fa-paper-plane fa-lg"></i>
+          </button>
+          
           <div className="button uploadButton">
             <label htmlFor="file-upload" className="custom-file-upload">
-              <i className="fa fa-cloud-upload uploadButtons "></i> Docs
+              <i className="fa-solid fa-file uploadButtons "></i> Docs
             </label>
             <input id="file-upload" type="file" onChange={handleDocumentUpload} style={{ display: 'none' }} />
           </div>
           <div className="button uploadButton">
             <label htmlFor="image-upload" className="custom-file-upload">
-              <i className="fa fa-cloud-upload uploadButtons "></i> Image
+              <i className="fa-regular fa-image uploadButtons "></i> Image
             </label>
             <input id="image-upload" type="file" onChange={handleImageUpload} style={{ display: 'none' }} />
           </div>
