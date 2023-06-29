@@ -588,18 +588,18 @@ function Chat() {
           />
           
           <button onClick={handleSend} type="submit" className="button1">
-            <i class="fa fa-paper-plane fa-lg"></i>
+            <i class="fa-solid fa-paper-plane fa-lg"></i>
           </button>
           
           <div className="button uploadButton">
             <label htmlFor="file-upload" className="custom-file-upload">
-              <i className="fa fa-file uploadButtons "></i> Docs
+              <i className="fa-solid fa-file uploadButtons "></i> Docs
             </label>
             <input id="file-upload" type="file" onChange={handleDocumentUpload} style={{ display: 'none' }} />
           </div>
           <div className="button uploadButton">
             <label htmlFor="image-upload" className="custom-file-upload">
-              <i className="fa fa-image uploadButtons "></i> Image
+              <i className="fa-regular fa-image uploadButtons "></i> Image
             </label>
             <input id="image-upload" type="file" onChange={handleImageUpload} style={{ display: 'none' }} />
           </div>
