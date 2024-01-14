@@ -4,6 +4,9 @@
 
 ![Screenshot (550)](https://github.com/UltimoPhantom/ChatWave/assets/71602200/bdf5ad63-c751-4c9b-a6d0-37da164a9082)
 
+![Screenshot (551)](https://github.com/UltimoPhantom/ChatWave/assets/71602200/3f1c2781-de2b-4ff6-9fdc-bc34ae78219c)
+
+
 ![Screenshot (548)](https://github.com/UltimoPhantom/ChatWave/assets/71602200/dfa58a30-969d-4c74-b5f3-a6bdc4c1e109)
 
 ![Screenshot (549)](https://github.com/UltimoPhantom/ChatWave/assets/71602200/68519086-0b4d-435c-b35e-1be475dfe8a7)
